@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="countdown, timer, counter, hour, day">
+    <title>CDT | Count Down Timer</title>
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>CDT</h1>
+            <h4>Count Down Timer</h4>
+        </div>
+
+        <form aria-required="true" autocomplete="off">
+            <div class="form-input">
+                <div class="input">
+                    <input type="number" name="jam" id="input-jam" value="0">
+                    <label for="input-jam">JAM</label>
+                </div>
+                <div class="input">
+                    <input type="number" name="menit" id="input-menit" value="0">
+                    <label for="input-menit">MENIT</label>
+                </div>
+                <div class="input">
+                    <input type="number" name="detik" id="input-detik" value="0">
+                    <label for="input-detik">DETIK</label>
+                </div>
+
+                <p id="text"></p>
+            </div>
+            <div class="form-button">
+                <button type="button" id="counter">CountDown Now!</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container-count hidden">
+        <div class="count">
+            <div class="counter">
+                <h1 class="timer" id="jam"></h1>
+            </div>
+            <span>:</span>
+            <div class="counter">
+                <h1 class="timer" id="menit"></h1>
+            </div>
+            <span>:</span>
+            <div class="counter">
+                <h1 class="timer" id="detik"></h1>
+            </div>
+        </div>
+
+        <button id="close">CLOSE</button>
+    </div>
+
+    <audio loop id="sound" class="hidden">
+        <source src="src/sound-countdown.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="dist/js/index.js"></script>
+</body>
+
+</html>
